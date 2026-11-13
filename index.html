@@ -1,1 +1,44 @@
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Складская программа</title>
+<style>
+body{font-family:Arial;background:#f1f4f9;margin:0;color:#172b4d}
+header{background:#17345c;color:white;padding:24px;text-align:center}
+main{max-width:600px;margin:25px auto;padding:15px}
+.card{background:white;padding:22px;border-radius:14px;margin-bottom:15px;box-shadow:0 3px 12px #0001}
+button{width:100%;padding:15px;margin:7px 0;border:0;border-radius:9px;background:#1769d2;color:white;font-size:17px}
+input{width:100%;padding:13px;box-sizing:border-box;border:1px solid #ccc;border-radius:8px;margin:7px 0}
+</style>
+</head>
+<body>
+<header>
+<h1>СКЛАД</h1>
+<p>Система управления складом</p>
+</header>
+<main>
+<div class="card">
+<h2>Вход в программу</h2>
+<input id="name" placeholder="Имя пользователя">
+<input id="pin" type="password" placeholder="PIN-код">
+<button onclick="login()">Войти</button>
+<p id="message"></p>
+</div>
+<div class="card" id="menu" hidden>
+<h2>Главное меню</h2>
+<button>Сканирование товара</button>
+<button>История операций</button>
+<button>Работники</button>
+<button onclick="location.reload()">Выйти</button>
+</div>
+</main>
+<script>
+function login(){
+document.getElementById('message').textContent=
+'Система входа пока подключается. Обратитесь к администратору.';
+}
+</script>
+</body>
+</html>
